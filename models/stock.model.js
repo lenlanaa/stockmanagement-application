@@ -15,28 +15,15 @@ const stockSchema= new mongoose.Schema({
         type: String
     },
     
-    id:{
-        required: true,
-        type: String
-    },
-    role:{
+    measurements:{
         type: String,
         required: true,
         enum:{
-            values:["HR","Manager","IT_admin","Stocks"],
+            values:["Kg","Liters","pcs"],
             message:"{value} is not valid role"
         }
     },
 
-    createDate: {
-        required: true,
-        type: Date,
-        default: new Date()
-    },
-    updateTime: {
-        required: false,
-        type: Date,
-        default: new Date()}
     
 });
 
